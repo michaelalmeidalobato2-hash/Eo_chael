@@ -4235,8 +4235,8 @@ end
 -- 🔁 Actualización en tiempo real
 local function updateAdvancedStats(targetPlayer)
     if not targetPlayer then
-        enemyHealthLabel.Text = "Vida del Enemigo: N/A"
-        playerDamageLabel.Text = "Tu Daño: N/A"
+        enemyHealthLabel.Text = "Vida de Enemigo: N/A"
+        playerDamageLabel.Text = "Tu Dano: N/A"
         hitsToKillLabel.Text = "Golpes para Matar: N/A"
         return
     end
@@ -4245,8 +4245,8 @@ local function updateAdvancedStats(targetPlayer)
     local playerDamage = calculateLocalPlayerDamage()
     local hitsToKill = calculateHitsToKill(enemyHealth, playerDamage)
 
-    enemyHealthLabel.Text = "Vida del Enemigo: " .. FormatDisplay(enemyHealth)
-    playerDamageLabel.Text = "Tu Daño: " .. FormatDisplay(playerDamage)
+    enemyHealthLabel.Text = "Vida de Enemigo: " .. FormatDisplay(enemyHealth)
+    playerDamageLabel.Text = "Tu Dano: " .. FormatDisplay(playerDamage)
     hitsToKillLabel.Text = "Golpes para Matar: " .. tostring(hitsToKill)
 end
 
@@ -4888,6 +4888,7 @@ Credits:AddLabel("Instagram : davis_michael02")
 Credits:AddLabel("KAEL É PERFEITO 🔥")
 
 Credits:AddLabel("KAEL MIM Lindo")
+
 
 
 
