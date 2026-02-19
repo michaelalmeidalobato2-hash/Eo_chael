@@ -37,7 +37,7 @@ AutoFarm:Show()
 getgenv()._AutoRepFarmEnabled = false  
 
 -- Switch en la librería
-AutoFarm:AddSwitch("Fuerza OP", function(state)
+AutoFarm:AddSwitch("Força OP", function(state)
     getgenv()._AutoRepFarmEnabled = state
     warn("[Auto Rep Farm] Estado cambiado a:", state and "ON" or "OFF")
 end)
@@ -242,7 +242,7 @@ AutoFarm:AddSwitch("Hide All Frames", function(bool)
 end)
 
 
-AutoFarm:AddSwitch("Anti Lag (Baja Graficos)", function()
+AutoFarm:AddSwitch("Anti Lag (Full Optimization)", function()
     for _, v in pairs(game:GetDescendants()) do
         if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Fire") or v:IsA("Sparkles") then
             v.Enabled = false
@@ -380,7 +380,7 @@ AutoFarm:AddSwitch("Anti AFK", function(state)
         uselesslabelone.Position = UDim2.new(0.3,0,0,0)
         uselesslabelone.Size = UDim2.new(0,95,0,24)
         uselesslabelone.Font = Enum.Font.SourceSans
-        uselesslabelone.Text = "Anti Afk V2 BY MVX_DeathKillerX"
+        uselesslabelone.Text = "Anti Afk V2 BY Davismichael02"
         uselesslabelone.TextColor3 = Color3.fromRGB(255,255,255)
         uselesslabelone.TextSize = 14
 
@@ -774,12 +774,12 @@ RebirthFolder:AddButton("Jungle Lift", function()
     print("[Jungle Lift] Teletransport ejecutado correctamente.")
 end)
 
-AutoFarm:AddLabel("Farm Sin Packs")
+AutoFarm:AddLabel("Farm Sem Packs")
 
 local autoEquipToolsFolder = AutoFarm:AddFolder("Auto Tools")
 
 
-autoEquipToolsFolder:AddSwitch("Auto Pushups y Pegarle Ala Roca de 10M", function(state)
+autoEquipToolsFolder:AddSwitch("Auto Pushups", function(state)
     getgenv().autoPushups10M = state
     task.spawn(function()
         while getgenv().autoPushups10M and LocalPlayer.Character do
@@ -4888,4 +4888,5 @@ Credits:AddLabel("Tiktok:")
 Credits:AddLabel("MVX ON TOP 🔥")
 
 Credits:AddLabel("JASSON MI VIEJA")
+
 
