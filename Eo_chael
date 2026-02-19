@@ -803,7 +803,7 @@ autoEquipToolsFolder:AddSwitch("Auto Pushups", function(state)
 end)
 
 
-autoEquipToolsFolder:AddSwitch("Fuerza OP", function(state)
+autoEquipToolsFolder:AddSwitch("Força OP", function(state)
     getgenv()._AutoRepFarmEnabled = state
     warn("[Auto Rep Farm] Estado cambiado a:", state and "ON" or "OFF")
 end)
@@ -1579,7 +1579,7 @@ FolderDurabilidad:AddButton("Calculate Durability", function()
 end)
 
 
-local killerTab = window:AddTab("Killer")
+local killerTab = window:AddTab("Kill")
 
 local titleLabel = killerTab:AddLabel("Select damage or durability pet")
 titleLabel.TextSize = 18
@@ -1826,7 +1826,7 @@ game.Players.PlayerAdded:Connect(function(player)
 end)
 
 -- Whitelist management UI
-killerTab:AddTextBox("Agregar Jugador a Whitelist (User/Nick)", function(text)
+killerTab:AddTextBox("Agregar Jogador a Whitelist (User/Nick)", function(text)
     if text and text ~= "" then
         local player = findClosestPlayer(text)
         if player then
@@ -1872,7 +1872,7 @@ killerTab:AddTextBox("Quitar Jugador de Whitelist (Name/Nickname)", function(tex
     end
 end)
 
-killerTab:AddButton("Limpiar Whitelist", function()
+killerTab:AddButton("Limpar Whitelist", function()
     _G.whitelistedPlayers = {}
     updateWhitelistedPlayersLabel()
 end)
@@ -1932,7 +1932,7 @@ local LocalPlayer = Players.LocalPlayer
 local spyTargetDropdownItems = {}
 local targetPlayerName
 
-local spyTargetDropdown = killerTab:AddDropdown("Seleccionar Jugador Para Ver", function(selectedText)
+local spyTargetDropdown = killerTab:AddDropdown("Seleccionar Jogador Para Ver", function(selectedText)
 	for _, player in ipairs(Players:GetPlayers()) do
 		local combined = string.format("%s (%s)", player.DisplayName, player.Name)
 		if combined == selectedText then
@@ -1972,7 +1972,7 @@ Players.PlayerRemoving:Connect(function(player)
 end)
 
 
-killerTab:AddSwitch("Ver Jugador", function(bool)
+killerTab:AddSwitch("Ver Jogador", function(bool)
     spying = bool
     if not spying then
         local cam = workspace.CurrentCamera
@@ -2180,7 +2180,7 @@ local targetPlayerNames = {}
 local selectedTarget = nil
 
 
-local button = killerTab:AddButton("Quitar la animación al puño", function()
+local button = killerTab:AddButton("Quitar la animacion al punho", function()
     local blockedAnimations = {
         ["rbxassetid://3638729053"] = true,
         ["rbxassetid://3638767427"] = true,
@@ -2368,7 +2368,7 @@ function RecoveryPunch()
     end
 end
 
-killerTab:AddButton("Regresar La Animacion Al Puño", function()
+killerTab:AddButton("Regresar La Animacion Al Punho", function()
     RecoveryPunch()
 end)
 
@@ -2502,7 +2502,7 @@ end)
 
 local godDamageActive = false
 
-killerTab:AddSwitch("Daño con God mode", function(state)
+killerTab:AddSwitch("Dano com God mode", function(state)
     godDamageActive = state
     if state then
         task.spawn(function()
@@ -2563,7 +2563,7 @@ killerTab:AddSwitch("Pegar Muerto", function()
 end)
 
 
-local button = killerTab:AddButton("Congelar el agua", function()
+local button = killerTab:AddButton("Congelar A Água", function()
    
     local WalkPart = Instance.new("Part")
     WalkPart.Parent = Game.Workspace
@@ -4017,7 +4017,7 @@ for _, option in ipairs(timeOptions) do
 end
 
 
-local estadisticas = window:AddTab("Stats Jugadores")
+local estadisticas = window:AddTab("Stats Jogadores")
 
 local SelectPlayerName = ""
 
@@ -4882,11 +4882,12 @@ end)
 
 local Credits = window:AddTab("Credits")
 
-Credits:AddLabel("Toxic Paid V3")
-Credits:AddLabel("Script Hecho por: Rafael")
-Credits:AddLabel("Tiktok:")
-Credits:AddLabel("MVX ON TOP 🔥")
+Credits:AddLabel("Farming Rebirths")
+Credits:AddLabel("Script feito por: Davismichael")
+Credits:AddLabel("Instagram : davis_michael02")
+Credits:AddLabel("KAEL É PERFEITO 🔥")
 
-Credits:AddLabel("JASSON MI VIEJA")
+Credits:AddLabel("KAEL MIM Lindo")
+
 
 
