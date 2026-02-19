@@ -9,7 +9,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memej
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
-local window = library:AddWindow("Toxic Paid V3 Rework | Bienvenido " .. displayName, {
+local window = library:AddWindow("farming Rebirths | Bienvenido " .. displayName, {
     main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(630, 900),
     can_resize = false,
@@ -4886,4 +4886,5 @@ Credits:AddLabel("Toxic Paid V3")
 Credits:AddLabel("Script Hecho por: Rafael")
 Credits:AddLabel("Tiktok:")
 Credits:AddLabel("MVX ON TOP 🔥")
+
 Credits:AddLabel("JASSON MI VIEJA")
